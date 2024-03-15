@@ -3,7 +3,7 @@ function getHole(index) {
 }
 
 for (let i = 1; i < 10; i++) {
-    getHole(i).onclick = checkHole(getHole(i).className)
+    getHole(i).onclick = () => checkHole(getHole(i).className)
 }
 
 function checkHole(className) {
