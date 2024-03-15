@@ -1,13 +1,15 @@
-const img = document.getElementById('cookie')
+const cookie = document.getElementById('cookie')
 img.onclick = function () {
     const clicker = document.getElementById('clicker__counter')
     if (clicker.textContent % 2 == 0) {
         clicker.textContent++
-        img.width = 150
-        img.height = 96
+        cookie.width = 150
+        cookie.height = 96
     } else {
         clicker.textContent++
-        img.width = 200
-        img.height = 128
+        cookie.width = 200
+        cookie.height = 128
     }
+    //cookie.width = ++clicker.textContent % 2 ? 150 : 200
+    //cookie.height = ++clicker.textContent % 2 ? 96 : 128
 }
