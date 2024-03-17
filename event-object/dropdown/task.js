@@ -1,7 +1,9 @@
 const list = document.querySelector('.dropdown__list')
 
 list.closest('div').addEventListener('click', () => {
-    list.classList.add('dropdown__list_active') 
+    if(!list.className.includes('dropdown__list_active')) {
+        list.classList.add('dropdown__list_active') 
+    }
 })
 
 const items = Array.from(document.querySelectorAll('.dropdown__link'))
