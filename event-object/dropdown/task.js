@@ -11,8 +11,10 @@ list.closest('div').addEventListener('click', (event) => {
 
 const items = Array.from(document.querySelectorAll('.dropdown__link'))
 items.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault()
         document.querySelector('.dropdown__value').textContent = item.textContent
-        return
+        list.classList.remove('dropdown__list_active')
+        event.stopPropagation()
     })
 })

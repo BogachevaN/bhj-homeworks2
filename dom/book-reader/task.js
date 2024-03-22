@@ -17,5 +17,6 @@ sizes.forEach((size) => {
             size.classList.add('font-size_active')
             book.className = 'book book_fs-big'
         }
+        book.textContent
     })
 })
